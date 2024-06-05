@@ -74,11 +74,11 @@ jobs:
 
   container:
     needs: [pre-commit, lint, test]
-    
+
     strategy:
       matrix:
         os: [ubuntu-latest, macos-14]
-  
+
     runs-on: ${{ matrix.os }}
 
     env:
